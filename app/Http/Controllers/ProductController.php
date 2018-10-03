@@ -34,7 +34,6 @@ class ProductController extends Controller
             $timeStart_db = DB::table('products')->min('created_at');
             $timeEnd_db = DB::table('products')->max('created_at');
 
-
             $price_min = $request->has('price_min') ? $request->input('price_min') : $price_min_db;
             $price_max = $request->has('price_max') ? $request->input('price_max') : $price_max_db;
             $count = $request->has('count') ? $request->input('count') : null;
